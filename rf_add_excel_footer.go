@@ -8,6 +8,7 @@ import (
 	"github.com/xuri/excelize/v2"
 )
 
+// add text
 func AddExcelFooter(f *excelize.File, sheetName string) {
 	currentTime := time.Now().AddDate(543, 0, 0).Format("2 Jan 2006")
 	month := time.Now().Format("Jan")
