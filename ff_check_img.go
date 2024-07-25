@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ตรวจสอบว่า file ที่ส่งมาเป็นไฟล์ภาพหรือไม่
 func CheckIMG(fileHeader *multipart.FileHeader) (bool, error) {
 	// Open the file
 	file, err := fileHeader.Open()

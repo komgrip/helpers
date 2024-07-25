@@ -10,9 +10,10 @@ import (
 	"github.com/nwaples/rardecode"
 )
 
-func ExtractRAR(RARfileName string, extractDestination string) error {
+// แตกไฟล์ RAR โดยการส่ง RARfilePath (/path/to/your/archive.rar) และ extractDestination (/destination/folder)
+func ExtractRAR(RARfilePath string, extractDestination string) error {
 
-	rr, err := rardecode.OpenReader(RARfileName, "")
+	rr, err := rardecode.OpenReader(RARfilePath, "")
 
 	if err != nil {
 		return fmt.Errorf("read: failed to create reader: %v", err)

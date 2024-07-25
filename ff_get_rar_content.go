@@ -7,10 +7,10 @@ import (
 	"github.com/nwaples/rardecode"
 )
 
-// Get filename(s) from within the Archive
-func GetRARContents(RARfileName string) (string, error) {
+// อ่านรายการช้อมูลในไฟล์ RAR โดยการส่ง RARfilePath ("/path/to/your/archive.rar")
+func GetRARContents(RARfilePath string) (string, error) {
 
-	rr, err := rardecode.OpenReader(RARfileName, "")
+	rr, err := rardecode.OpenReader(RARfilePath, "")
 
 	if err != nil {
 		return "", fmt.Errorf("read: failed to create reader: %v", err)
