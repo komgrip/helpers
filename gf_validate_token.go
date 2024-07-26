@@ -16,3 +16,5 @@ func GetValidateToken(token, secretKey string) (*jwt.Token, error) {
 		return []byte(secretKey), nil
 	})
 }
+
+//
