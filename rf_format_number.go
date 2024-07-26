@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// รับตัวเลข, จำนวนทศนิยม และ การบังคับให้แสดงทศนิยมแม้ว่าตัวเลขจะเป็นจำนวนเต็ม
 func FormatNumber(num float64, decimal int, forceShowDecimal bool) string {
 	numStr := strconv.FormatFloat(num, 'f', decimal, 64)
 	intPart, decPart := splitNumber(numStr)

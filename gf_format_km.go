@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// แปลง format KM เช่น 10 เป็น 0+010
 func FormatKM(n int64) string {
 	if n < 0 {
 		return "-" + FormatKM(-n)

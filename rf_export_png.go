@@ -22,6 +22,7 @@ type ExportPDFStruct struct {
 	Height   float64
 }
 
+// export PNG img from HTML file
 func ExportPNG(data interface{}, HTMLTemplatePath string) (ExportPDFStruct, error) {
 	filePath := os.Getenv("GENARAL_EXCEL")
 	templateName := os.Getenv(HTMLTemplatePath)

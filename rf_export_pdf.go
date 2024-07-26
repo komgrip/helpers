@@ -15,6 +15,7 @@ import (
 	"github.com/google/uuid"
 )
 
+// export PDF report
 func ExportPDF(data interface{}, reportName, HTMLTemplatePath string) (interface{}, error) {
 	filePath := os.Getenv("GENARAL_PDF")
 	templateName := os.Getenv(HTMLTemplatePath)
