@@ -17,6 +17,7 @@ type UploadBase64Struct struct {
 	Size     int64
 }
 
+// อัพโหลดรูปภาพจาก Base64 โดยการส่ง base64Code, ชื่อไฟล์ที่ต้องการ และ folderPath ("/path/to/your_folder")
 func UploadBase64(base64Code, fileName, folderPath string) (UploadBase64Struct, error) {
 
 	base64Data := strings.Split(base64Code, ",")
