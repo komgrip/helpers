@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// รับ text format และ LINE Token เพื่อส่งแจ้งเตือนผ่าน LINE notification
 func SentLineNotification(text, lineToken string) error {
 	tokens := strings.Split(lineToken, ",")
 	for _, token := range tokens {

@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// ตรวจสอบความถูกค้องของรหัสบัตรประจำตัวประชาชน
 func ThaiNationalIDValidator(id string) error {
 	if len(id) != 13 {
 		return errors.New("invalid length")

@@ -12,6 +12,7 @@ type PaginationStruct struct {
 	Items        interface{} `json:"items" extensions:"x-order=7"`
 }
 
+// รับค่า parameter เพื่อ return format paginate
 func Pagination(data interface{}, limit, page, total int64) interface{} {
 	totalPages := int64(math.Ceil(float64(total) / float64(limit)))
 	var pagination PaginationStruct

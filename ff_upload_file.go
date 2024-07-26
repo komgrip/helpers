@@ -2,7 +2,6 @@ package helpers
 
 import (
 	"mime/multipart"
-	"net/http"
 	"os"
 	"path/filepath"
 	"time"
@@ -18,6 +17,7 @@ type UploadFileStruct struct {
 	Size     int64
 }
 
+// อัพโหลดไฟล์ โดยการส่ง *gin.Context และ folderPath ("/path/to/your_folder")
 func UploadFile(c *gin.Context, folderPath string) (UploadFileStruct, error) {
 
 	var fileHeader *multipart.FileHeader
@@ -38,7 +38,6 @@ func UploadFile(c *gin.Context, folderPath string) (UploadFileStruct, error) {
 	uid := uuid.NewString()
 	fullPath := filepath.Join(storages, uid+fileHeader.Filename)
 	if err := c.SaveUploadedFile(fileHeader, fullPath); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return UploadFileStruct{}, err
 	}
 

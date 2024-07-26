@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 )
 
+// export HTML report
 func ExportHTML(data interface{}, reportName, HTMLTemplatePath string) (interface{}, error) {
 	filePath := os.Getenv("GENARAL_HTML")
 	templateName := os.Getenv(HTMLTemplatePath)
