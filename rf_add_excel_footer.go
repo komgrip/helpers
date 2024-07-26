@@ -9,7 +9,7 @@ import (
 )
 
 // add text 2
-func AddExcelFooter(f *excelize.File, sheetName string) {
+func AddExcelFooter(f *excelize.File, sheetName string) { 
 	currentTime := time.Now().AddDate(543, 0, 0).Format("2 Jan 2006")
 	month := time.Now().Format("Jan")
 	monthThai := map[string]string{
