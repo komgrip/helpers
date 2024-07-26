@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 )
 
+// รับ imagePath ("/path/to/your_folder/your_img.png") เพื่อแปลงเป็น base64
 func IMGToBase64(imagePath string) (string, error) {
 	// อ่านไฟล์จาก path ที่ได้รับมา
 	imageBytes, err := ioutil.ReadFile(imagePath)

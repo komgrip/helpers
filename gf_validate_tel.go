@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// ตรวจสอบความถูกค้องของเบอร์โทรศัพท์
 func ValidateTel(tel string) error {
 
 	if len(tel) == 0 {

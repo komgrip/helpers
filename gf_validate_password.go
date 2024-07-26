@@ -6,6 +6,7 @@ import (
 	"unicode"
 )
 
+// ตรวจสอบเงื่อนไขการตั้งค่ารหัสผ่าน
 func ValidatePassword(password string, minimun int) error {
 	if password == "" {
 		return fmt.Errorf("zero value")

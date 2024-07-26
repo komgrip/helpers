@@ -19,6 +19,7 @@ type UploadURLStruct struct {
 	Size     int64
 }
 
+// อัพโหลดไฟล์ โดยการรับ URL และ folderPath ("/path/to/your_folder")
 func UploadURL(url, folderPath string) (UploadURLStruct, error) {
 
 	urlSplit := strings.Split(url, "/")

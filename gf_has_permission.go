@@ -1,6 +1,6 @@
 package helpers
 
-// check the permissions match with the access keys
+// ตรวจสอบสิทธิ์ รัย permissions และ accessKeys จะ return true ถ้ามีสิทธิ์
 func HasPermission(permissions, accessKeys []string) bool {
 	hasPermission := false
 	for _, item := range accessKeys {
